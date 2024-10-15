@@ -1,0 +1,138 @@
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.contact {
+  background-color: var(--Red);
+  background-image: url(images/bg-intro-desktop.png);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0px 30px;
+}
+
+.row {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+  /*3rem*/
+  justify-content: center;
+  align-items: center;
+}
+
+.row .col_1 {
+  color: white;
+}
+
+.row .col_1 h1 {
+  font-size: 50px;
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+
+.row .col_2 .trail {
+  background-color: var(--Blue);
+  color: white;
+  text-align: center;
+  padding: 15px 0px;
+  margin-bottom: 32px;
+  box-shadow: 0px 8px 4px rgb(28 21 21 / 44%);
+  border-radius: 10px;
+}
+
+.row .col_2 form {
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.row .col_2 form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--Grayish-Blue);
+}
+
+.row .col_2 form input:focus {
+  outline: 1px solid var(--Dark-Blue);
+}
+
+.row .col_2 form button[type="submit"] {
+  background-color: var(--Green);
+  color: white;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px 0px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 4px rgb(0 0 0 / 31%);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.row .col_2 form p {
+  color: var(--Grayish-Blue);
+  font-size: 12px;
+  text-align: center;
+}
+
+.row .col_2 form p a {
+  text-decoration: none;
+  color: var(--Red);
+  font-weight: 600;
+}
+
+/* Responsive */
+/*Small devices (phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+  .contact {
+    text-align: center;
+  }
+
+  .container {
+    padding: 60px 30px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .row .col_1 h1 {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+}
+
+
+/* Medium devices (landscape tablets, 992px and up) */
+@media only screen and (max-width: 768px) and (max-width: 992px) {
+  .row {
+    column-gap: 16px;
+  }
+
+  .row .col_1 h1 {
+    font-size: 40px;
+  }
+}
